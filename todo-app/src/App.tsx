@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Styled} from './App.styles.ts';
+import InputText from "./component/Input.tsx";
+import {useState} from "react";
+import Button from "./component/Button.tsx";
+import Task from "./component/Task.tsx";
+
+interface Task {
+    title: string;
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [inputValue, setInputValue] = useState("");
+    const [tasks, setTasks] = useState<Task[]>([]);
+    const handleAddNewTask = () => {
+        setTasks([
+            ...tasks,
+            {title: inputValue}
+        ])
+        setInputValue("")
+    }
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleDeleteTask = (title: string) => {
+        const filterValues = tasks.filter(item => item.title != title);
+        setTasks(filterValues);
+    }
+
+    return (
+        <Styled.Container>
+            <Styled.Wrapper>
+                <Styled.Board>
+                    <h2>Todo List</h2>
+                    <Styled.AddSection>
+                        <InputText placeholder="What needs to be done?" value={inputValue}
+                                   setInputChange={setInputValue}/>
+                        <Button name='Add' onClickEvent={() => handleAddNewTask()} icon={""}/>
+                    </Styled.AddSection>
+                    <Styled.TaskWrapper data-testid="todo-title">
+                        {tasks?.map(task => (
+                            <Task key={task.title} title={task.title}
+                                  handleDeleteTask={() => handleDeleteTask(task.title)}/>
+                        ))}
+                    </Styled.TaskWrapper>
+                </Styled.Board>
+            </Styled.Wrapper>
+        </Styled.Container>
+    )
 }
 
 export default App
