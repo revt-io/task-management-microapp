@@ -1,20 +1,31 @@
 import {Styled} from "./Task.styles.ts";
 import {FaRegTrashAlt} from "react-icons/fa";
 import Button from "./Button.tsx";
+import InputText from "./Input.tsx";
 
 interface TaskProps {
     title: string;
-    handleDeleteTask: (e: string) => void;
+    handleDeleteTask: (e: number) => void;
+    handleChangeInputTask: (taskId: number, value: string) => void;
+    idTask: number;
 }
 
-const Task = ({title, handleDeleteTask}: TaskProps) => {
+const Task = ({
+                  title,
+                  handleDeleteTask,
+                  handleChangeInputTask,
+                  idTask,
+              }: TaskProps) => {
+
 
     return (
         <Styled.Container data-testid="todo-task">
             <Styled.Wrapper>
-                <Styled.Title>{title}</Styled.Title>
+                <InputText value={title} setInputChange={(value, taskId) => handleChangeInputTask(taskId ?? 0, value)}
+                           id={idTask}/>
                 <Styled.Symbol>
-                    <Button name={""} onClickEvent={() => handleDeleteTask(title)} icon={<FaRegTrashAlt/>}/>
+                    <Button onClickEvent={() => handleDeleteTask(idTask)}
+                            icon={<FaRegTrashAlt/>} id={idTask}/>
                 </Styled.Symbol>
             </Styled.Wrapper>
         </Styled.Container>

@@ -1,17 +1,16 @@
 import {Styled} from './Input.styles.ts';
 
 interface InputTextProps {
-    placeholder: string;
+    placeholder?: string;
     value: string;
-    setInputChange: (e: string) => void;
+    setInputChange: (value: string, id?: number) => void;
+    id?: number;
 }
 
-const InputText = ({placeholder, value, setInputChange}: InputTextProps) => {
+const InputText = ({placeholder, value, setInputChange, id}: InputTextProps) => {
     return (
-
-        <Styled.Input placeholder={placeholder} value={value} onChange={(e) => setInputChange(e.target.value)}
-                      type="text"/>
-
+        <Styled.Input placeholder={placeholder} value={value} onChange={(e) => setInputChange(e.target.value, id)}
+                      type="text" data-testid={`todo-input-${id || 'no-id'}`}/>
     );
 };
 

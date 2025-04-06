@@ -1,14 +1,19 @@
-import {test, expect, type Page} from '@playwright/test';
+import {test, expect} from '@playwright/test';
 
 test.beforeEach(async ({page}) => {
     await page.goto('http://localhost:5173/');
 });
 
 test.describe('Todo List', () => {
-    test('should render tasks correctly', async ({page}) => {
+    test('should delete tasks correctly', async ({page}) => {
+        const task = await page.getByTestId('todo-task');
+        await expect(task).toHaveCount(2);
 
-        const tasks = await page.locator('[data-testid="todo-task"]');
+        const taskToDelete = page.locator('[data-testid="todo-task"]:nth-child(1)');
 
-        await expect(tasks.locator('p')).toHaveText('Task 1');
+        const deleteButton = taskToDelete.locator('[data-testid="delete-button"]');
+        await deleteButton.click();
+
+        await expect(page.locator('[data-testid="todo-input-1"]')).not.toBeVisible();
     });
 });

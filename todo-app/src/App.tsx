@@ -1,26 +1,52 @@
 import {Styled} from './App.styles.ts';
-import InputText from "./component/Input.tsx";
 import {useState} from "react";
-import Button from "./component/Button.tsx";
 import Task from "./component/Task.tsx";
+import InputText from "./component/Input.tsx";
+import Button from "./component/Button.tsx";
 
 interface Task {
+    id: number;
     title: string;
 }
 
+const TaskData: Task[] = [
+    {
+        id: 1,
+        title: "Task 1"
+    },
+    {
+        id: 2,
+        title: "Task 2"
+    },
+]
+
 function App() {
     const [inputValue, setInputValue] = useState("");
-    const [tasks, setTasks] = useState<Task[]>([]);
+    const [tasks, setTasks] = useState<Task[]>(TaskData);
+
     const handleAddNewTask = () => {
-        setTasks([
-            ...tasks,
-            {title: inputValue}
-        ])
-        setInputValue("")
+        if (inputValue.trim()) {
+            setTasks((prevTasks) => [
+                ...prevTasks,
+                {id: prevTasks.length + 1, title: inputValue},
+            ]);
+            setInputValue("");
+        }
+    };
+
+    const handleChangeInputTask = (taskId: number, value: string) => {
+        const updatedTasks = tasks.map(task =>
+            task.id === taskId ? {...task, title: value} : task
+        );
+        setTasks(updatedTasks);
     }
 
-    const handleDeleteTask = (title: string) => {
-        const filterValues = tasks.filter(item => item.title != title);
+    const onChangeInputAdd = (value: string) => {
+        setInputValue(value)
+    }
+
+    const handleDeleteTask = (taskId: number) => {
+        const filterValues = tasks.filter(item => item.id != taskId);
         setTasks(filterValues);
     }
 
@@ -31,13 +57,15 @@ function App() {
                     <h2>Todo List</h2>
                     <Styled.AddSection>
                         <InputText placeholder="What needs to be done?" value={inputValue}
-                                   setInputChange={setInputValue}/>
-                        <Button name='Add' onClickEvent={() => handleAddNewTask()} icon={""}/>
+                                   setInputChange={onChangeInputAdd}/>
+                        <Button name='Add' onClickEvent={() => handleAddNewTask()}/>
                     </Styled.AddSection>
                     <Styled.TaskWrapper data-testid="todo-title">
-                        {tasks?.map(task => (
-                            <Task key={task.title} title={task.title}
-                                  handleDeleteTask={() => handleDeleteTask(task.title)}/>
+                        {tasks.map(task => (
+                            <Task key={task.id} title={task.title} idTask={task.id}
+                                  handleDeleteTask={() => handleDeleteTask(task.id)}
+                                  handleChangeInputTask={handleChangeInputTask}
+                            />
                         ))}
                     </Styled.TaskWrapper>
                 </Styled.Board>

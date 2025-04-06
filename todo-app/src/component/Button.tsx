@@ -3,15 +3,17 @@ import {ReactNode} from 'react';
 
 
 interface ButtonProps {
-    name: string;
-    onClickEvent: (e?: string) => void;
-    icon: ReactNode;
+    id?: number;
+    name?: string;
+    onClickEvent: (e?: number) => void;
+    icon?: ReactNode;
 }
 
-const Button = ({name, onClickEvent, icon}: ButtonProps) => {
+const Button = ({id, onClickEvent, icon, name}: ButtonProps) => {
     return (
 
-        <Styled.Button onClick={() => onClickEvent(name)}>{icon ? icon : name}</Styled.Button>
+        <Styled.Button data-testid="delete-button"
+                       onClick={() => onClickEvent(id)}>{icon ? icon : name}</Styled.Button>
 
     );
 };
