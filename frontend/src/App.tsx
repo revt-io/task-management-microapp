@@ -34,6 +34,7 @@ function App() {
         }
     };
 
+
     const handleChangeInputTask = (taskId: number, value: string) => {
         const updatedTasks = tasks.map(task =>
             task.id === taskId ? {...task, title: value} : task
