@@ -9,4 +9,5 @@ public interface TaskService {
     public TaskDTO addNewTask(String title);
     public TaskDTO editTask(Long id, String title);
     public List<TaskDTO> getAllTask();
+    public void deleteTask(Long id);
 }

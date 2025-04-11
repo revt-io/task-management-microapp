@@ -1,6 +1,6 @@
 package org.example.todolist.service;
 
-import org.example.todolist.common.mapper.TaskMapper;
+import jakarta.persistence.EntityNotFoundException;
 import org.example.todolist.dto.TaskDTO;
 import org.example.todolist.entity.TaskEntity;
 import org.example.todolist.repository.TaskRepository;
@@ -12,14 +12,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class TaskServiceImplTest {
@@ -33,8 +31,9 @@ public class TaskServiceImplTest {
     private TaskEntity taskEntity2;
     private TaskDTO taskDTO;
     private TaskDTO taskDTO2;
+
     @BeforeEach
-    void setUp(){
+    void setUp() {
         long taskId = 1L;
         taskEntity = new TaskEntity();
         taskEntity.setId(taskId);
@@ -95,5 +94,19 @@ public class TaskServiceImplTest {
         // Assert
         assertNotNull(result);
         assertEquals(newTitle, result.getTitle());
+    }
+
+    @Test
+    void deleteTask() {
+        // Arrange
+        Long taskId = 999L;
+        doThrow(new EntityNotFoundException("Task not found with id: " + taskId))
+                .when(taskRepository).deleteById(taskId);
+
+        // Act & Assert
+        assertThrows(EntityNotFoundException.class, () -> {
+            taskService.deleteTask(taskId);
+        });
+        verify(taskRepository, times(1)).deleteById(taskId);
     }
 }
