@@ -19,16 +19,16 @@ public class TaskController {
     private final TaskService taskService;
 
     @PostMapping("/task")
-    public ResponseEntity<TaskDTO> addNewTask(@RequestBody TaskDTO taskDTO){
+    public ResponseEntity<TaskDTO> addNewTask(@RequestBody TaskDTO taskDTO) {
         String title = taskDTO.getTitle();
         if (title == null || title.trim().isEmpty()) {
             throw new ArgumentNotValidException("Title cannot be null or empty");
         }
         TaskDTO taskResult = taskService.addNewTask(title);
-        return ResponseEntity.status(HttpStatus.OK).body(taskResult);
+        return ResponseEntity.status(HttpStatus.CREATED).body(taskResult);
     }
 
-    @PutMapping ("/task")
+    @PutMapping("/task")
     public ResponseEntity<TaskDTO> editTask(@RequestBody TaskDTO taskDTO) {
         String title = taskDTO.getTitle();
         Long id = taskDTO.getId();
@@ -46,5 +46,11 @@ public class TaskController {
             throw new ResourceNotFoundException("No tasks found");
         }
         return ResponseEntity.status(HttpStatus.OK).body(taskDTO);
+    }
+
+    @DeleteMapping("/task/{id}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
+        taskService.deleteTask(id);
+        return ResponseEntity.noContent().build();
     }
 }

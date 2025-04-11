@@ -11,6 +11,12 @@ export const Styled = {
         justify-content: space-between;
         align-content: center;
     `,
+    Title: styled.input`
+        color: var(--dark);
+        border: none;
+        background-color: transparent;
+        outline: none;
+    `,
     Symbol: styled.div`
         display: flex;
         align-content: center;

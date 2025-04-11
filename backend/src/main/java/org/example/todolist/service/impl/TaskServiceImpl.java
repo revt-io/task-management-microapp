@@ -21,14 +21,14 @@ public class TaskServiceImpl implements TaskService {
     public TaskDTO addNewTask(String title) {
         TaskEntity newTask = TaskEntity.builder()
                 .title(title).build();
-        TaskEntity taskEntity =taskRepository.save(newTask);
+        TaskEntity taskEntity = taskRepository.save(newTask);
         return TaskMapper.entityToDTO(taskEntity);
     }
 
     @Override
     public TaskDTO editTask(Long id, String title) {
         Optional<TaskEntity> taskUpdate = taskRepository.findById(id);
-        if (taskUpdate.isPresent()){
+        if (taskUpdate.isPresent()) {
             TaskEntity taskEntity = taskUpdate.get();
             taskEntity.setTitle(title);
             taskEntity = taskRepository.save(taskEntity);
@@ -41,5 +41,10 @@ public class TaskServiceImpl implements TaskService {
     public List<TaskDTO> getAllTask() {
         List<TaskEntity> taskEntities = taskRepository.findAll();
         return TaskMapper.entityToDTOs(taskEntities);
+    }
+
+    @Override
+    public void deleteTask(Long id) {
+        taskRepository.deleteById(id);
     }
 }
