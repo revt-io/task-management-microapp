@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26b44673-fca9-4790-9cf9-f19fa9e5113c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/App.styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Button.styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Input.styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Task.styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/component/Task.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/main/resources/db/migration/V1__initial.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/target/classes/db/migration/V1__initial.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tests-examples/demo-todo-app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tests/e2e/addTask.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tests/e2e/deteleTask.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tests/e2e/editTask.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tests/example.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/AppManagement/vite.config.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;datnt700&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/revt-io/project-practice.git&quot;,
+    &quot;accountId&quot;: &quot;f2c45997-b9f5-4f8c-93bd-dea804fd28c9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2v5XLetOpfIYdKQkERhx7gjoHxB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TodoListApplication.executor": "Run",
+    "JUnit.TaskServiceImplTest.deleteTask.executor": "Run",
+    "Playwright.API tests.Add todo.executor": "Run",
+    "Playwright.API tests.Delete todo.executor": "Run",
+    "Playwright.API tests.Edit todos.executor": "Run",
+    "Playwright.API tests.Get todos.executor": "Run",
+    "Playwright.Delete Task.Task deletion.should delete a task when the delete button is clicked.executor": "Debug",
+    "Playwright.Delete Task.executor": "Debug",
+    "Playwright.Edit Task.executor": "Run",
+    "Playwright.Edit Task.should allow me to edit task.executor": "Run",
+    "Playwright.New Task (1).executor": "Run",
+    "Playwright.New Task.executor": "Run",
+    "Playwright.New Task.should allow me to add task.executor": "Debug",
+    "Playwright.Todo List.executor": "Run",
+    "Playwright.Todo List.should delete tasks correctly.executor": "Run",
+    "Playwright.Todo List.should render tasks correctly.executor": "Run",
+    "Playwright.has title.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.TodoListApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/user/Desktop/Projet/AppManagement",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.TodoListApplication">
+    <configuration name="TaskServiceImplTest.deleteTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TodoList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.todolist.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.todolist.service" />
+      <option name="MAIN_CLASS_NAME" value="org.example.todolist.service.TaskServiceImplTest" />
+      <option name="METHOD_NAME" value="deleteTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="API tests.Add todo" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <playwright-package value="$PROJECT_DIR$/frontend/node_modules/@playwright/test" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/tests/e2e/api.spec.ts" />
+      <test-names>
+        <test-name value="API tests" />
+        <test-name value="Add todo" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="API tests.Delete todo" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <playwright-package value="$PROJECT_DIR$/frontend/node_modules/@playwright/test" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/tests/e2e/api.spec.ts" />
+      <test-names>
+        <test-name value="API tests" />
+        <test-name value="Delete todo" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="API tests.Edit todos" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <playwright-package value="$PROJECT_DIR$/frontend/node_modules/@playwright/test" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/tests/e2e/api.spec.ts" />
+      <test-names>
+        <test-name value="API tests" />
+        <test-name value="Edit todos" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="API tests.Get todos" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <playwright-package value="$PROJECT_DIR$/frontend/node_modules/@playwright/test" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/tests/e2e/api.spec.ts" />
+      <test-names>
+        <test-name value="API tests" />
+        <test-name value="Get todos" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoListApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TodoList" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.todolist.TodoListApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Playwright.API tests.Delete todo" />
+        <item itemvalue="JUnit.TaskServiceImplTest.deleteTask" />
+        <item itemvalue="Playwright.API tests.Edit todos" />
+        <item itemvalue="Playwright.API tests.Get todos" />
+        <item itemvalue="Playwright.API tests.Add todo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26b44673-fca9-4790-9cf9-f19fa9e5113c" name="Changes" comment="" />
+      <created>1743435853803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743435853803</updated>
+      <workItem from="1743435854883" duration="1530000" />
+      <workItem from="1743603287403" duration="750000" />
+      <workItem from="1743604041349" duration="3432000" />
+      <workItem from="1743684869424" duration="824000" />
+      <workItem from="1743685920710" duration="10915000" />
+      <workItem from="1743776195453" duration="3626000" />
+      <workItem from="1743779830955" duration="5353000" />
+      <workItem from="1743834254729" duration="9379000" />
+      <workItem from="1743931492106" duration="12540000" />
+      <workItem from="1744027458910" duration="72000" />
+      <workItem from="1744027533422" duration="1682000" />
+      <workItem from="1744029219198" duration="81000" />
+      <workItem from="1744029306714" duration="194000" />
+      <workItem from="1744029503314" duration="428000" />
+      <workItem from="1744029934587" duration="481000" />
+      <workItem from="1744030424076" duration="4121000" />
+      <workItem from="1744115395572" duration="9767000" />
+      <workItem from="1744127242033" duration="4000" />
+      <workItem from="1744200517655" duration="8228000" />
+      <workItem from="1744208777254" duration="879000" />
+      <workItem from="1744272978128" duration="4632000" />
+      <workItem from="1744373666103" duration="4678000" />
+      <workItem from="1744459134082" duration="4147000" />
+      <workItem from="1744632713342" duration="670000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/org/example/todolist/controller/TaskController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/org/example/todolist/controller/TaskController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/tests/e2e/addTask.spec.ts</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
