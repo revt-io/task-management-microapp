@@ -6,9 +6,7 @@ export const Styled = {
         display: flex;
         position: relative;
 
-        input:focus + span {
-            visibility: visible;
-        }
+
     `,
     Input: styled.input`
         width: 100%;
@@ -28,5 +26,13 @@ export const Styled = {
         z-index: 1;
         right: 0;
         top: 0;
+
+        &.visible {
+            visibility: visible; /* When input is focused and onKeyDown is defined */
+        }
+
+        &.hidden {
+            visibility: hidden; /* When input is not focused or onKeyDown is undefined */
+        }
     `,
 }
