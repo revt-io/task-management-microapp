@@ -8,8 +8,6 @@ interface TaskProps {
     handleDeleteTask: (e: number) => void;
     handleChangeInputTask: (taskId: number, value: string) => void;
     idTask: number;
-    onChangeInput: (value: string, taskId?: number) => void;
-    inputRef: React.RefObject<(HTMLInputElement | null)[]>;
 }
 
 const Task = ({
@@ -17,23 +15,14 @@ const Task = ({
                   handleDeleteTask,
                   handleChangeInputTask,
                   idTask,
-                  onChangeInput,
-                  inputRef
               }: TaskProps) => {
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, value: string) => {
-        if (e.key === 'Enter') {
-            handleChangeInputTask(idTask, value);
-        }
-    };
+
+
     return (
         <Styled.Container data-testid="todo-task">
             <Styled.Wrapper>
-                <InputText value={title}
-                           setInputChange={(value: string, taskId: number | undefined) => onChangeInput(value, taskId)}
-                           id={idTask}
-                           onKeyDown={handleKeyDown}
-                           inputRef={inputRef}
-                />
+                <InputText value={title} setInputChange={(value, taskId) => handleChangeInputTask(taskId ?? 0, value)}
+                           id={idTask}/>
                 <Styled.Symbol>
                     <Button onClickEvent={() => handleDeleteTask(idTask)}
                             icon={<FaRegTrashAlt/>} id={idTask}/>
@@ -41,6 +30,6 @@ const Task = ({
             </Styled.Wrapper>
         </Styled.Container>
     )
-};
+}
 
 export default Task;
