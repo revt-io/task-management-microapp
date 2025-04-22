@@ -5,30 +5,12 @@ export const Styled = {
         width: 100%;
         background-color: #e8e8e8;
     `,
-    Wrapper: styled.div`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+    MainContent: styled.div`
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (min-width: 1024px) {
+            grid-template-columns: 0.5fr 0.5fr 1fr;
+        }
     `,
-    Board: styled.div`
-        width: 50%;
-        padding: 2rem;
-        background-color: #fff;
-        text-align: center;
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    `,
-    AddSection: styled.div`
-        display: flex;
-        gap: 0.5rem;
-        width: 100%;
-    `,
-    TaskWrapper: styled.div`
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    `,
+
 }
