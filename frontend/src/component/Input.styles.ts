@@ -6,14 +6,12 @@ export const Styled = {
         display: flex;
         position: relative;
 
-
     `,
     Input: styled.input`
         width: 100%;
-        border: 1px solid #eeeeee;
+        border: none;
         padding: 1rem;
         border-radius: 0.5rem;
-
     `,
     Span: styled.span`
         visibility: hidden;
@@ -28,11 +26,11 @@ export const Styled = {
         top: 0;
 
         &.visible {
-            visibility: visible; /* When input is focused and onKeyDown is defined */
+            visibility: visible;
         }
 
         &.hidden {
-            visibility: hidden; /* When input is not focused or onKeyDown is undefined */
+            visibility: hidden;
         }
     `,
 }

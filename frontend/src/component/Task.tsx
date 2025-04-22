@@ -1,6 +1,6 @@
 import {Styled} from "./Task.styles.ts";
 import {FaRegTrashAlt} from "react-icons/fa";
-import Button from "./Button.tsx";
+import {Button} from "./Button.tsx";
 import InputText from "./Input.tsx";
 
 interface TaskProps {

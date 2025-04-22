@@ -5,17 +5,19 @@ import {ReactNode} from 'react';
 interface ButtonProps {
     id?: number;
     name?: string;
-    onClickEvent: (e?: number) => void;
+    onClickEvent: (e?: number | string | boolean) => void;
     icon?: ReactNode;
+    style?: React.CSSProperties;
 }
 
-const Button = ({id, onClickEvent, icon, name}: ButtonProps) => {
+export const Button = ({id, onClickEvent, icon, name, style}: ButtonProps) => {
     return (
 
         <Styled.Button data-testid="delete-button"
-                       onClick={() => onClickEvent(id)}>{icon ? icon : name}</Styled.Button>
+                       style={style}
+                       onClick={() => onClickEvent(id)}>{icon ? icon :
+            name}</Styled.Button>
 
     );
 };
 
-export default Button;
